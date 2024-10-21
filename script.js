@@ -19,10 +19,28 @@ const barbearia = {
   
   
 function buscaCortePorId(id) {
+
+   for (i=0; i<barbearia.cortes.length; i++){
+
+      if ( id == barbearia.cortes[i].id){
+        return barbearia.cortes[i]
+      }
+
+   } 
+   return "Corte não encontrado" 
 }
 
 function buscaBarbaPorId(id) {
-}
+
+    for (i=0; i<barbearia.barbas.length; i++){
+
+        if ( id == barbearia.barbas[i].id){
+          return barbearia.barbas[i]
+        }
+  
+     } 
+     return "Barba não encontrada" 
+  }
 
 function verificaStatusBarbearia() {
 }
