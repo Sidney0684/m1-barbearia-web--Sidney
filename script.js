@@ -60,7 +60,25 @@ function retornaTodasBarbas() {
   return listaDeBarbas;
 }
 
-function criaPedido(nomeCliente, corteId, barbaId) {}
+function criaPedido(nomeCliente, corteId, barbaId) {
+
+  let buscaCortesPorId = 
+
+  let buscaBarbaPorId =
+
+
+let pedido = {
+
+Nome:
+pedidoCorte:
+pedidoCortePreco:
+pedidoBarba:
+pedidoBarbaPreco:
+
+  }
+
+
+}
 
 function atualizarServico(lista, id, valor, tipo) {}
 
