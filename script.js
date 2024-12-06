@@ -61,25 +61,33 @@ function retornaTodasBarbas() {
 }
 
 function criaPedido(nomeCliente, corteId, barbaId) {
-  let buscaCortesPorId = buscaCortesPorId();
+  let corte = buscaCortePorId(corteId);
 
-  let buscaBarbaPorId = buscaBarbaPorId();
+  let barba = buscaBarbaPorId(barbaId);
 
   let pedido = {
     nome: nomeCliente,
-    pedidoCorte: corteId,
-    pedidoCortePreco: barbearia.cortes.id,
-    pedidoBarba: barbaId,
-    pedidoBarbaPreco: barbearia.barbas.id,
+    pedidoCorte: corte.tipo,
+    pedidoCortePreco: corte.valor,
+    pedidoBarba: barba.tipo,
+    pedidoBarbaPreco: barba.valor,
   };
+  console.log (pedido)
   return pedido;
 }
-criaPedido (Sidney, 1, 2)
 
 function atualizarServico(lista, id, valor, tipo) {
+ let posicao = 0
 
-
-  
+  for (let i = 0; i < lista.length; i++) {
+    if (lista[i].id==id) {
+     posicao=i
+    }
+  }
+lista[posicao]={id,valor,tipo}
+return lista
 }
 
-function calculaTotal(pedido) {}
+
+function calculaTotal(pedido) {
+  return pedido.pedidoCortePreco + pedido.pedidoBarbaPreco}
